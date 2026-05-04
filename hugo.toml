@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'http://localhost:1313/'
 locale = 'zh-cn'
 title = '福清灵石寺'
 theme = 'hugo-theme-stack'
@@ -17,4 +17,4 @@ disqusShortname = "hugo-theme-stack"
 [pagination]
     pagerSize = 5
 
-ignoreLogs = ['warning-goldmark-raw-html']
+ignoreLogs = 'warning-goldmark-raw-html'

@@ -1,0 +1,31 @@
+name: Deploy Hugo to CloudBase
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.160.1'
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Install CloudBase CLI
+        run: npm install -g @cloudbase/cli@2.11.5
+
+      - name: Deploy to CloudBase
+        run: |
+          tcb login --apiKeyId ${{ secrets.TCB_SECRET_ID }} --apiKey ${{ secrets.TCB_SECRET_KEY }}
+          tcb hosting deploy ./public -e ${{ secrets.TCB_ENV_ID }} --verbose
