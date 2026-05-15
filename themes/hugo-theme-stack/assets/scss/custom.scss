@@ -1,0 +1,260 @@
+/* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
+    /* 侧边栏 */
+  .sidebar {
+            width: 100%;
+            background-color: #ffffff;
+            padding: 10px 15px 0 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .qr-section {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .qr-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .qr-code {
+            width: 80px;
+            height: 80px;
+            background-color: #d4c8be;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5a5148;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+           .qr-code img {
+            width: 80px;
+            height: 80px;
+           }
+
+        .qr-info {
+            flex: 1;
+        }
+
+        .qr-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #5a5148;
+            margin-bottom: 4px;
+        }
+
+        .qr-desc {
+            font-size: 12px;
+            color: #8b7d70;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #e6e1dc;
+        }
+
+        .category-section .category-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #5a5148;
+            margin-bottom: 12px;
+        }
+        .category-section ul {
+            margin: 0 auto;
+            padding: 15px 0 0;
+        }
+
+    .category-section {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .category-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .category-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: left;
+            padding: 8px 12px;
+            background-color: #f7f5f2;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-item:hover {
+            background-color: #e6ded6;
+        }
+
+        .category-list li a {
+           gap: 0px;
+        }
+
+        .category-name {
+            font-size: 18px;
+            text-align: left;
+            color: #5a5148;
+        }
+
+        .category-count {
+            font-size: 14px;
+            color: #8b7d70;
+            background-color: #e6ded6;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+         /* 右侧顶部导航 */
+
+          .navbar {
+            top: 0;
+            right: 0;
+            width: 100%;
+            border-radius: 12px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e6e1dc;
+            padding: 12px 24px;
+        }
+
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-item {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 20px;
+            background-color: #f7f5f2;
+            border-radius: 20px;
+            color: #5a5148;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover {
+            background-color: #e6ded6;
+            color: #333;
+        }
+
+        .nav-item.active {
+            background-color: #d4c8be;
+            color: #5a5148;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px 16px;
+            }
+
+            .navbar-container {
+                gap: 8px;
+            }
+
+            .nav-item {
+                padding: 6px 14px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar-container {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 6px;
+            }
+
+            .nav-item {
+                padding: 5px 12px;
+                font-size: 16px;
+            }
+        }
+
+        /* 文章列表缩略图响应式尺寸 */
+.article-list {
+    article {
+        .article-image {
+            /* 移动端默认：60x60 */
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+            overflow: hidden;
+            margin: 60px 10px 0;
+            border-radius: var(--card-border-radius);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .article-details {padding: 10px;}
+
+        header {padding-bottom: 0;}
+
+        /* 桌面端：768px 以上变为 160x160 */
+        @media (min-width: 768px) {
+            .article-image {
+                width: 160px;
+                height: 160px;
+                margin: 20px 20px 0;
+                flex-shrink: 0;
+                border-radius: 14px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .article-details {
+                    flex: 1;
+                    min-width: 0;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: var(--card-padding);
+                    gap: var(--spacing-md);padding: 10px;}
+        header {padding: 5px 0 20px 10px;}
+        }
+    }
+}
+
+.article-page .main-article .article-header .article-image {
+                /* 移动端默认：60x60 */
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+            overflow: hidden;
+            margin: 40px 15px 0;
+            border-radius: var(--card-border-radius);
+                    /* 桌面端：768px 以上变为 160x160 */
+          
+
+        @media (min-width: 768px) {
+            .article-image img {
+                width: 160px;
+                height: 160px;
+            }
+            header.article-category {margin-bottom: 20px;}
+        }
+
+}

@@ -1,0 +1,6 @@
+[[main]]
+    name = "分类"
+    url = "/categories/"
+    weight = 5
+    [main.params]
+        icon = "categories"   # 这个会显示默认的分类图标

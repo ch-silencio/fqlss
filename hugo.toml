@@ -1,0 +1,31 @@
+baseURL = 'http://www.fqlss.com/'
+locale = 'zh-cn'
+title = '福清灵石寺'
+theme = 'hugo-theme-stack'
+# 站点描述（用于 SEO）
+description = "福清灵石律学苑以丛林为体，佛制为用；学以戒律为主，经论为辅；行以般若为导，净土为归。致力于培养爱国爱教、道心坚固、僧格高超的真学实修者及与时俱进的弘法人才。"
+# 站点关键词（逗号分隔）
+keywords = ["福清灵石寺", "灵石寺", "学戒道场", "灵石寺律学苑"]
+
+# Theme i18n support
+# See all available values at https://github.com/CaiJimmy/hugo-theme-stack/tree/master/i18n
+defaultContentLanguage = "zh"
+
+# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
+# This will make .Summary and .WordCount behave correctly for CJK languages.
+hasCJKLanguage = false
+
+# Change it to your Disqus shortname before using
+disqusShortname = "hugo-theme-stack"
+
+[pagination]
+    pagerSize = 50
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+      
+# 评论
+[params.comments]
+  enabled = false

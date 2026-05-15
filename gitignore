@@ -1,0 +1,48 @@
+# ============================================================
+# Hugo Site .gitignore
+# 排除 images/ 和 img/ 不上传 GitHub
+# ============================================================
+
+# ---- 图片文件夹（不上传 GitHub，也不推送到服务器）----
+images/
+img/
+static/
+
+# ---- Hugo 构建输出 ----
+public/
+resources/
+.hugo_build.lock
+
+# ---- 本地草稿和私人内容 ----
+drafts/
+private/
+content/page/
+content/categories/
+
+# ---- 本地开发文件 ----
+*.tmp
+*.bak
+*.swp
+*.log
+TODO.md
+notes/
+test/
+tmp/
+
+# ---- 编辑器/IDE ----
+.vscode/
+.idea/
+*.sublime-*
+
+# ---- 操作系统文件 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Node/依赖（如果有） ----
+node_modules/
+package-lock.json
+yarn.lock
+
+# ---- 其他 ----
+.deploy-exclude.txt
